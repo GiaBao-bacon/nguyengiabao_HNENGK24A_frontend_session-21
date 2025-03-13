@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = parseFloat(prompt("Nhập số a"));
+      let b = parseFloat(prompt("Nhập số b"));
+      let c = parseFloat(prompt("Nhập số c"));
+
+      let dt = b * b - 4 * a * c;
+      console.log(`Delta = ${dt}`);
+
+      if (dt < 0) {
+        console.log("Phương trình vô nghiệm");
+      } else if (dt === 0) {
+        let x = -b / (2 * a);
+        console.log(`Phương trình có nghiệm kép x1 = x2 = ${x}`);
+      } else {
+        let x1 = (-b + Math.sqrt(dt)) / (2 * a);
+        let x2 = (-b - Math.sqrt(dt)) / (2 * a);
+        console.log(
+          `Phương trình có 2 nghiệm phân biệt x1 = ${x1}, x2 = ${x2}`
+        );
+      }
+    </script>
+  </body>
+</html>
